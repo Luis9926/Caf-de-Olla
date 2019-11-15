@@ -59,6 +59,7 @@
       </div>
     </div>
     </nav>
+    <div class="informacion text-center" id="informacion"></div>
     <div class="container">
       <div class="row">
         <div class="col rounded-pill border border-dark" style="background-color: #3b9422;">
@@ -76,21 +77,90 @@
         <tbody class="">
           <tr>
             <td><h5>BCG</h5></td>
-            <td><a href="#">Ver informacion...</a></td>
+            <td><a href="javascript:popup(1)" class="align-self-center">Ver informacion...</a></td>
             <td>{{Fecha}}</td>
           </tr>
           <tr>
-            <td><h5>Hepatitis B</h5></td>
-            <td><a href="#">Ver informacion...</a></td>
+            <td><h5>HEPATITIS B</h5></td>
+            <td><a href="javascript:popup(2)" class="align-self-center">Ver informacion...</a></td>
             <td>{{Fecha}}</td>
           </tr>
           <tr>
             <td><h5>PENTAVALENTE<br>ACELULAR<br></h5><h6>DPaT + VPI + Hib</h6></td>
-            <td><a href="#">Ver informacion...</a></td>
+            <td><a href="javascript:popup(3)" class="align-self-center">Ver informacion...</a></td>
+            <td>{{Fecha}}</td>
+          </tr>
+          <tr>
+            <td><h5>DPT</h5></td>
+            <td><a href="javascript:popup(4)" class="align-self-center">Ver informacion...</a></td>
+            <td>{{Fecha}}</td>
+          </tr>
+          <tr>
+            <td><h5>ROTAVIRUS</h5></td>
+            <td><a href="javascript:popup(5)" class="align-self-center">Ver informacion...</a></td>
+            <td>{{Fecha}}</td>
+          </tr>
+          <tr>
+            <td><h5>NEUMOCÓCICA CONJUGADA</h5></td>
+            <td><a href="javascript:popup(6)" class="align-self-center">Ver informacion...</a></td>
+            <td>{{Fecha}}</td>
+          </tr>
+          <tr>
+            <td><h5>INFLUENZA</h5></td>
+            <td><a href="javascript:popup(7)" class="align-self-center">Ver informacion...</a></td>
+            <td>{{Fecha}}</td>
+          </tr>
+          <tr>
+            <td><h5>S R P</h5></td>
+            <td><a href="javascript:popup(8)" class="align-self-center">Ver informacion...</a></td>
+            <td>{{Fecha}}</td>
+          </tr>
+          <tr>
+            <td><h5>SABIN</h5></td>
+            <td><a href="javascript:popup(9)" class="align-self-center">Ver informacion...</a></td>
+            <td>{{Fecha}}</td>
+          </tr>
+          <tr>
+            <td><h5>S R</h5></td>
+            <td><a href="javascript:popup(9)" class="align-self-center">Ver informacion...</a></td>
             <td>{{Fecha}}</td>
           </tr>
         </tbody>
       </table>
     </div>
   </body>
+  <script type="text/javascript">
+    function popup(id) {
+      debugger
+      //Al llamar esta funcion se asigna opacidad 100% a un div que muestra la imagen y el titulo
+      //ademas de que activas pos pointer-events que se utilizaran para cerrar el div
+      $("#informacion").empty();
+      $("#informacion").css("opacity", "100%");
+      $("#informacion").css("pointer-events", "all");
+      $("#informacion").css("padding-top", "10px");
+      //Al hacer click en sobre el div que muestra la imagen este se oculta y se desactivan sus ponter-events
+      $("div").click(function(){
+        $("#informacion").css("opacity", "0%");
+        $("#informacion").css("pointer-events", "none");
+        $("#informacion").css("padding-top", "0");
+      });
+    }
+    </script>
+  <style type="text/css">
+    .informacion
+    {
+      position: fixed;
+      padding: 0;
+      padding-top: -10%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(242,242,242,.8);
+      z-index: 2;
+      opacity: 0%;
+      pointer-events: none;
+      transition: .5s;
+    }
+ </style>
 </html>
