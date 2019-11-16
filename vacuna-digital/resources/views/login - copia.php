@@ -2,7 +2,7 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>{{Curp}}</title>
+    <title>Registrarse o iniciar sesion</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -22,7 +22,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbartop" style="padding-bottom:0;padding-top:0;background:#fff;">
 		<div class="container float-left">
-			<a class="navbar-brand logo" href="index">
+			<a class="navbar-brand logo" href="/index">
 				<img class="img-logo" src="http://www.durango.gob.mx/wp-content/themes/theme/img/dgo.png" style="width: 175px;">
 				<!-- <img class="img-logo" src="http://www.durango.gob.mx/wp-content/themes/theme/img/dgo_rosa.png" style="width: 175px;"> -->
 			</a>
@@ -59,37 +59,38 @@
       </div>
 		</div>
 	  </nav>
-    <div class="container">
-      <h1>CONSULTA TU CARTILLA DE SALUD</h1>
-      <div class="row">
-        <div class="col-6">
-          <h2>e($datos['curp'])</h2>
-          <h3>Nombre completo:</h3>
-          e($datos['nombre']) e($datos['apellido_paterno']) e($datos['apellido_materno'])
-          <h3>Genero</h3>
-          <h3>Domicilio:</h3>
-          {{Domicilio}}
-          <h3>Lugar y fecha de nacimiento</h3>
-          {{Lugar}} {{Fecha}}
-          <h3>Cerificado de nacimiento:</h3>
-          {{}}
-          <h3>Grupo sanguineo:</h3>
-          {{}}
-          <h3>Afiliación / Matrícula / Expediente:</h3>
-          {{}}
-          <h3>Unidad Medica:</h3>
-          {{}}-->
-        </div>
-          <div class="col-4">
-            <img src="{{URL::to('/')}}/img/user.png" alt="image" width="350px" height="350px" alt="">
-            <a href="/EsquemaNino"><button onclick="">Ver esquema de valunacion niños</button></a>
-
-          {{}}
-        </div>
-          <div class="col-4">
-            <img src="img/user.png" width="350px" height="350px" alt="">
-            <a href="EsquemaNino.html"><button onclick="">Ver esquema de valunacion niños</button></a>
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center">Registrarse</h1>
+        <form style="padding-left: 5%; padding-right: 5%;">
+          <div class="form-group">
+            <label for="inputPassword4">Correo electronico</label>
+            <input type="email" class="form-control" id="email" placeholder="Correo electronico">
           </div>
+          <div class="form-group">
+            <label for="inputPassword4">Contraseña</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
+          </div>
+          <div class="form-group">
+            <label for="inputPassword4">Verificar contraseña</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Verificar contraseña">
+          </div>
+          <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+      </div>
+      <div class="col">
+        <h1 class="text-center">Iniciar sesion</h1>
+        <form style="padding-right: 5%;">
+          <div class="form-group">
+            <label for="inputPassword4">Correo electronico o CURP</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Correo electronico o CURP">
+          </div>
+          <div class="form-group">
+            <label for="inputPassword4">Contraseña</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
+          </div>
+          <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+        </form>
       </div>
     </div>
   </body>
