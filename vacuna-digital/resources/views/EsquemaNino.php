@@ -62,6 +62,7 @@
         </div>
     </nav>
     <div class="informacion text-center" id="informacion">
+        <?= e($esquema)?>
         </div>
     <div class="container">
         <div class="row">
