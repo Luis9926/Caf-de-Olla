@@ -14,9 +14,8 @@
 Route::get('/', function () {
     return view('login');
 });
-Route::get('/index', function () {
-    return view('index');
-});
+Route::get('/index/{id}', 'dataController@ingresar');
+
 Route::get('/EsquemaNino', function () {
     return view('EsquemaNino');
 });
