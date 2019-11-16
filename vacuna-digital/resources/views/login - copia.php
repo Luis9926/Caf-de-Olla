@@ -59,19 +59,39 @@
       </div>
 		</div>
 	  </nav>
-    
-        <h1 class="text-center">Iniciar sesion</h1>
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center">Registrarse</h1>
+        <form style="padding-left: 5%; padding-right: 5%;">
           <div class="form-group">
-            <label for="inputPassword4">Ingresa tu CURP</label>
-            <input type="text" class="form-control" name="curp" id="curp"  placeholder="Correo electronico o CURP" autocomplete="off" requiered>
+            <label for="inputPassword4">Correo electronico</label>
+            <input type="email" class="form-control" id="email" placeholder="Correo electronico">
           </div>
-          <button type="submit" onclick="ingresar()" class="btn btn-primary">Iniciar sesion</button>
-          
+          <div class="form-group">
+            <label for="inputPassword4">Contraseña</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
+          </div>
+          <div class="form-group">
+            <label for="inputPassword4">Verificar contraseña</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Verificar contraseña">
+          </div>
+          <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+      </div>
+      <div class="col">
+        <h1 class="text-center">Iniciar sesion</h1>
+        <form style="padding-right: 5%;">
+          <div class="form-group">
+            <label for="inputPassword4">Correo electronico o CURP</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Correo electronico o CURP">
+          </div>
+          <div class="form-group">
+            <label for="inputPassword4">Contraseña</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
+          </div>
+          <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+        </form>
+      </div>
+    </div>
   </body>
-  <script>
-    function ingresar(){
-      curp = "http://127.0.0.1:8000/index/"+document.getElementById("curp").value;
-      location.href = curp;
-    }
-  </script>
 </html>

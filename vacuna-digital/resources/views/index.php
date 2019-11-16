@@ -10,7 +10,7 @@
         font-size:21px;
       }
     </style>
-
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -42,13 +42,13 @@
 				<ul id="menu-main" class="navbar-nav mr-auto">
           <li id="menu-1" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home nav-item active"><a title="Inicio" class="nav-link" href="#">Cartilla de Salud</a></li>
           <li id="menu-2" class="menu-item menu-item-type-custom menu-item-object-custom nav-item"><a title="Trámites y Servicios" class="nav-link" href="#">Esquemas de Vacunacion</a></li>
-          <li id="menu-3" class="menu-item menu-item-type-custom menu-item-object-custom nav-item"><a title="Turismo" class="nav-link" href="#">Nutricion</a></li>
+          <li id="menu-3" class="menu-item menu-item-type-custom menu-item-object-custom nav-item"><a title="Turismo" class="nav-link" href="#">Nutricion</a></li>   
           <li id="menu-3" class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a title="Consulados" class="nav-link" href="#">Citas Informativas</a></li>
           <li id="menu-3" class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a title="Consulados" class="nav-link" href="/">Salir</a></li>
         </ul>
-
+       
       </div>
-
+      
 		</div>
 	  </nav>
     <div class="container" style="padding-top:50px;">
@@ -70,13 +70,13 @@
           <?= e($index['unidad_medica'])?>
         </div>
           <div class="col-4 align-self-center">
-            <img src="https://www.clipartwiki.com/clipimg/full/174-1742152_computer-icons-user-clip-art-transparent-user-icon.png" alt="" width="100%" style="padding-bottom:30px;" alt="">
+            <img src="https://www.clipartwiki.com/clipimg/full/174-1742152_computer-icons-user-clip-art-transparent-user-icon.png" alt="" width="100%" style="padding-bottom:30px;" alt=""> 
            <a href="/EsquemaNino"> <button type="button" class="btn btn-primary btn-lg btn-block" href="/EsquemaNino">Esquema de Vacunación</button></a>
       </div>
       <div align=center style="padding-top:50px;">
       <h1 style="padding-bottom:50px;">Mapa del Estado de Durango Organizado Por Grado de Marginación</h1>
         <img src="http://www.conapo.gob.mx/work/models/CONAPO/indices_margina/mf2010/AnexosMapas/Mapas/Entidadesfederativas/MapaB10Durango.jpg " style="width:100%;" alt="">
-
+        
       </div>
     </div>
   </body>
@@ -88,6 +88,6 @@
       location.href = "http://127.0.0.1:8000/";
     }
   });
-
+  
   </script>
 </html>
