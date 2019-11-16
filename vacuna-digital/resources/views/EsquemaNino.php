@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Esquema de vacunación - Niños</title>
+    <title>Esquema de vacunación -Niños</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
