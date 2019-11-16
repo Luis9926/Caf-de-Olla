@@ -17,7 +17,10 @@ class dataController extends Controller
 
     public function datosEsquema($curp)
     {
-      
+      $esquema=esquema_vacunacion::Find($curp);
+      $id_vacuna=$esquema['id_vacuna'];
+      $vacuna=vacuna::find($id_vacuna);
+      return view("EsquemaNino",["esquema"=>$esquema],["vacuna"=>$vacuna]);
     }
     public function entrar($id){
       $datos = datos_identificacion::find($id);
