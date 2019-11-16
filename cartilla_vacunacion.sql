@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-11-2019 a las 00:18:02
--- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.2
+-- Tiempo de generación: 16-11-2019 a las 10:49:46
+-- Versión del servidor: 10.4.8-MariaDB
+-- Versión de PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,18 +25,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `datos_identificacion`
+-- Estructura de tabla para la tabla `datos_identificacions`
 --
 
-CREATE TABLE `datos_identificacion` (
+CREATE TABLE `datos_identificacions` (
+  `id` varchar(20) NOT NULL,
   `curp` varchar(20) NOT NULL,
   `apellido_materno` varchar(30) NOT NULL,
   `apellido_paterno` varchar(30) NOT NULL,
+  `nombres` varchar(40) NOT NULL,
   `matricula_expediente` varchar(30) NOT NULL,
   `sexo` enum('HOMBRE','MUJER') NOT NULL,
   `unidad_medica` int(11) NOT NULL,
-  `consultorio` varchar(30) NOT NULL
+  `consultorio` varchar(30) NOT NULL,
+  `localidad_nacimiento` varchar(40) NOT NULL,
+  `fecha_nacimiento` date NOT NULL,
+  `calle` varchar(30) NOT NULL,
+  `numero` int(11) NOT NULL,
+  `localidad` varchar(40) NOT NULL,
+  `estado` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `datos_identificacions`
+--
+
+INSERT INTO `datos_identificacions` (`id`, `curp`, `apellido_materno`, `apellido_paterno`, `nombres`, `matricula_expediente`, `sexo`, `unidad_medica`, `consultorio`, `localidad_nacimiento`, `fecha_nacimiento`, `calle`, `numero`, `localidad`, `estado`) VALUES
+('GORM001017HDGMNA1', 'GORM001017HDGMNA1', 'GOMEX', 'RENTERIA', 'urango', 'HOLABUENAS', 'HOMBRE', 1414, 'SIMONKEY', 'Durango', '2019-11-13', 'calle cerrada', 244, 'Ocampo', 'Durango');
 
 -- --------------------------------------------------------
 
@@ -48,7 +63,7 @@ CREATE TABLE `esquema_vacunacion` (
   `id_vacuna_aplicada` int(10) UNSIGNED NOT NULL,
   `curp` varchar(20) NOT NULL,
   `id_vacuna` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -70,17 +85,16 @@ CREATE TABLE `vacuna` (
 --
 
 --
--- Indices de la tabla `datos_identificacion`
+-- Indices de la tabla `datos_identificacions`
 --
-ALTER TABLE `datos_identificacion`
-  ADD PRIMARY KEY (`curp`);
+ALTER TABLE `datos_identificacions`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `esquema_vacunacion`
 --
 ALTER TABLE `esquema_vacunacion`
   ADD PRIMARY KEY (`id_vacuna_aplicada`),
-  ADD KEY `curp` (`curp`),
   ADD KEY `vacuna` (`id_vacuna`);
 
 --
@@ -113,7 +127,7 @@ ALTER TABLE `vacuna`
 -- Filtros para la tabla `esquema_vacunacion`
 --
 ALTER TABLE `esquema_vacunacion`
-  ADD CONSTRAINT `curp` FOREIGN KEY (`curp`) REFERENCES `datos_identificacion` (`curp`),
+  ADD CONSTRAINT `curp` FOREIGN KEY (`curp`) REFERENCES `datos_identificacions` (`id`),
   ADD CONSTRAINT `vacuna` FOREIGN KEY (`id_vacuna`) REFERENCES `vacuna` (`id_vacuna`);
 COMMIT;
 
