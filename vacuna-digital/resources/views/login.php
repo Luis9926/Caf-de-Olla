@@ -59,13 +59,19 @@
       </div>
 		</div>
 	  </nav>
+    
         <h1 class="text-center">Iniciar sesion</h1>
-        <form style="padding-right: 5%;">
           <div class="form-group">
             <label for="inputPassword4">Ingresa tu CURP</label>
-            <input type="text" class="form-control" id="inputPassword4" placeholder="Correo electronico o CURP" autocomplete="off">
+            <input type="text" class="form-control" name="curp" id="curp"  placeholder="Correo electronico o CURP" autocomplete="off" requiered>
           </div>
-          <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-        </form>
+          <button type="submit" onclick="ingresar()" class="btn btn-primary">Iniciar sesion</button>
+          
   </body>
+  <script>
+    function ingresar(){
+      curp = "http://127.0.0.1:8000/index/"+document.getElementById("curp").value;
+      location.href = curp;
+    }
+  </script>
 </html>

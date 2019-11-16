@@ -61,7 +61,8 @@
             </div>
         </div>
     </nav>
-    <div class="informacion text-center" id="informacion"></div>
+    <div class="informacion text-center" id="informacion">
+        </div>
     <div class="container">
         <div class="row">
             <div class="col rounded-pill border border-dark" style="background-color: #3b9422;">
@@ -164,7 +165,12 @@
         $("#informacion").empty();
         $("#informacion").css("opacity", "100%");
         $("#informacion").css("pointer-events", "all");
-        $("#informacion").css("padding-top", "10px");
+        $("#informacion").css("padding-top", "60px");
+        $("#informacion").append(""
+        +"<h1>{{Nombre de vacuna}}</h1><br><br>"
+        +"<h3>La aplicacion de esta vacuna ayuda a prevenir enfermedades como {{enfermedad}}<br>"
+        +"y debe ser aplicada en niños menores de 10 años en el periodo de {{dosis}}</h3><br><br>"
+        )
         //Al hacer click en sobre el div que muestra la imagen este se oculta y se desactivan sus ponter-events
         $("div").click(function() {
             $("#informacion").css("opacity", "0%");
