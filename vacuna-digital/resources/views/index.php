@@ -10,7 +10,6 @@
         font-size:21px;
       }
     </style>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -48,7 +47,6 @@
         </ul>
 
       </div>
-
 		</div>
 	  </nav>
     <div class="container" style="padding-top:50px;">
@@ -70,8 +68,9 @@
           <?= e($index['unidad_medica'])?>
         </div>
           <div class="col-4 align-self-center">
+
             <img src="https://www.clipartwiki.com/clipimg/full/174-1742152_computer-icons-user-clip-art-transparent-user-icon.png" alt="" width="100%" style="padding-bottom:30px;" alt="">
-           <a href="/EsquemaNino"> <button type="button" class="btn btn-primary btn-lg btn-block" href="/EsquemaNino">Esquema de Vacunación</button></a>
+            <a href="/EsquemaNino"> <button type="button" class="btn btn-primary btn-lg btn-block" href="/EsquemaNino">Esquema de Vacunación</button></a>
       </div>
       <div align=center style="padding-top:50px;">
       <h1 style="padding-bottom:50px;">Mapa del Estado de Durango Organizado Por Grado de Marginación</h1>

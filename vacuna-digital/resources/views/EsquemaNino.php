@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Esquema de vacunación - Niños</title>
+    <title>Esquema de vacunación -Niños</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -164,7 +164,6 @@
         $("#informacion").css("opacity", "100%");
         $("#informacion").css("pointer-events", "all");
         $("#informacion").css("padding-top", "60px");
-
         for(i=0; i<vacunas.length;i++)
         {debugger
           if(vacunas[i].id==id){
