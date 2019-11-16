@@ -24,7 +24,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbartop" style="padding-bottom:0;padding-top:0;background:#fff;">
 		<div class="container float-left">
-			<a class="navbar-brand logo" href="index">
+			<a class="navbar-brand logo" href="#">
 				<img class="img-logo" src="http://www.durango.gob.mx/wp-content/themes/theme/img/dgo.png" style="width: 175px;">
 				<!-- <img class="img-logo" src="http://www.durango.gob.mx/wp-content/themes/theme/img/dgo_rosa.png" style="width: 175px;"> -->
 			</a>
@@ -70,14 +70,14 @@
                         <h5>BCG</h5>
                     </td>
                     <td><a href="javascript:popup(1)" class="align-self-center">Ver informacion...</a></td>
-                    <td>{{Fecha}}</td>
+                    <td> </td>
                 </tr>
                 <tr>
                     <td>
                         <h5>HEPATITIS B</h5>
                     </td>
                     <td><a href="javascript:popup(2)" class="align-self-center">Ver informacion...</a></td>
-                    <td>{{Fecha}}</td>
+                    <td> </td>
                 </tr>
                 <tr>
                     <td>
@@ -85,63 +85,78 @@
                         <h6>DPaT + VPI + Hib</h6>
                     </td>
                     <td><a href="javascript:popup(3)" class="align-self-center">Ver informacion...</a></td>
-                    <td>{{Fecha}}</td>
+                    <td> </td>
                 </tr>
                 <tr>
                     <td>
                         <h5>DPT</h5>
                     </td>
                     <td><a href="javascript:popup(4)" class="align-self-center">Ver informacion...</a></td>
-                    <td>{{Fecha}}</td>
+                    <td> </td>
                 </tr>
                 <tr>
                     <td>
                         <h5>ROTAVIRUS</h5>
                     </td>
                     <td><a href="javascript:popup(5)" class="align-self-center">Ver informacion...</a></td>
-                    <td>{{Fecha}}</td>
+                    <td> </td>
                 </tr>
                 <tr>
                     <td>
                         <h5>NEUMOCÓCICA CONJUGADA</h5>
                     </td>
                     <td><a href="javascript:popup(6)" class="align-self-center">Ver informacion...</a></td>
-                    <td>{{Fecha}}</td>
+                    <td> </td>
                 </tr>
                 <tr>
                     <td>
                         <h5>INFLUENZA</h5>
                     </td>
                     <td><a href="javascript:popup(7)" class="align-self-center">Ver informacion...</a></td>
-                    <td>{{Fecha}}</td>
+                    <td> </td>
                 </tr>
                 <tr>
                     <td>
                         <h5>S R P</h5>
                     </td>
                     <td><a href="javascript:popup(8)" class="align-self-center">Ver informacion...</a></td>
-                    <td>{{Fecha}}</td>
+                    <td> </td>
                 </tr>
                 <tr>
                     <td>
                         <h5>SABIN</h5>
                     </td>
                     <td><a href="javascript:popup(9)" class="align-self-center">Ver informacion...</a></td>
-                    <td>{{Fecha}}</td>
+                    <td> </td>
                 </tr>
                 <tr>
                     <td>
                         <h5>S R</h5>
                     </td>
                     <td><a href="javascript:popup(9)" class="align-self-center">Ver informacion...</a></td>
-                    <td>{{Fecha}}</td>
+                    <td> </td>
                 </tr>
             </tbody>
         </table>
     </div>
 </body>
 <script type="text/javascript">
+
     function popup(id) {
+      {
+        vacunas=[
+          {"id":"1", "nombre":"BCG", "enfermedad":"Tuberculosis","dosis":"una unica","edad":"al nacer"},
+          {"id":"2", "nombre":"Hepatitis B","enfermedad":"Hepatitis B","dosis":"tres","edad":"al nacer y a los 2 y 6 meses"},
+          {"id":"3", "nombre":"Pentavalente acelular","enfermedad":"Difteria, tos ferina, tetanos, poliomeritis e infecciones por H. influenzae b","dosis":"cuatro","edad":"a los 2, 4, 6 y 18 meses"},
+          {"id":"4", "nombre":"DPT","enfermedad":"Difteria, tos ferina y tetanos","dosis":"una","edad":"a los 4 años"},
+          {"id":"5", "nombre":"Rotavirus","enfermedad":"diarrea por rotavirus","dosis":"tres","edad":"a los 2, 4 y 6"},
+          {"id":"6", "nombre":"Neumococica conjugada","enfermedad":"","dosis":"","edad":"a los 2, 4, 12 meses"},
+          {"id":"7", "nombre":"Influenza","enfermedad":"","dosis":"","edad":"al nacer"},
+          {"id":"8", "nombre":"SPR","enfermedad":"","dosis":"","edad":"al nacer"},
+          {"id":"9", "nombre":"SABIN","enfermedad":"","dosis":"","edad":"al nacer"},
+          {"id":"10", "nombre":"SR","enfermedad":"","dosis":"","edad":"al nacer"}
+        ]
+      }
         debugger
         //Al llamar esta funcion se asigna opacidad 100% a un div que muestra la imagen y el titulo
         //ademas de que activas pos pointer-events que se utilizaran para cerrar el div
@@ -149,11 +164,17 @@
         $("#informacion").css("opacity", "100%");
         $("#informacion").css("pointer-events", "all");
         $("#informacion").css("padding-top", "60px");
-        $("#informacion").append(""
-        +"<h1>{{Nombre de vacuna}}</h1><br><br>"
-        +"<h3>La aplicacion de esta vacuna ayuda a prevenir enfermedades como {{enfermedad}}<br>"
-        +"y debe ser aplicada en niños menores de 10 años en el periodo de {{dosis}}</h3><br><br>"
-        )
+
+        for(i=0; i<vacunas.length;i++)
+        {debugger
+          if(vacunas[i].id==id){
+            $("#informacion").append(""
+            +"<h1>"+vacunas[i].nombre+"</h1><br><br>"
+            +"<h3>La aplicacion de esta vacuna ayuda a prevenir enfermedades como "+vacunas[i].enfermedad+"<br>"
+            +"y debe ser aplicada en niños menores de 10 años, contando con "+vacunas[i].dosis+" dosis<br>"
+            +"aplicada "+vacunas[i].edad+".</h3><br>")
+          }
+        }
         //Al hacer click en sobre el div que muestra la imagen este se oculta y se desactivan sus ponter-events
         $("div").click(function() {
             $("#informacion").css("opacity", "0%");

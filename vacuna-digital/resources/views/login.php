@@ -22,7 +22,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbartop" style="padding-bottom:0;padding-top:0;background:#fff;">
 		<div class="container float-left">
-			<a class="navbar-brand logo" href="index">
+			<a class="navbar-brand logo" href="#">
 				<img class="img-logo" src="http://www.durango.gob.mx/wp-content/themes/theme/img/dgo.png" style="width: 175px;">
 				<!-- <img class="img-logo" src="http://www.durango.gob.mx/wp-content/themes/theme/img/dgo_rosa.png" style="width: 175px;"> -->
 			</a>
