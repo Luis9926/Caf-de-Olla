@@ -63,9 +63,9 @@
       <h1>CONSULTA TU CARTILLA DE SALUD</h1>
       <div class="row">
         <div class="col-6">
-          <h2>e($datos['curp'])</h2>
+          <h2><?=e($index['curp'])?></h2>
           <h3>Nombre completo:</h3>
-          e($datos['nombre']) e($datos['apellido_paterno']) e($datos['apellido_materno'])
+         <?= e($index['nombre'])?> <?=e($index['apellido_paterno'])?> <?=e($index['apellido_materno'])?>
           <h3>Genero</h3>
           <h3>Domicilio:</h3>
           {{Domicilio}}
