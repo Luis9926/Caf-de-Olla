@@ -2,7 +2,7 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Registrarse o iniciar sesion</title>
+    <title>Registrarse o iniciar sesión</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
