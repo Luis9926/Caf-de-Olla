@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('login');
 });
+Route::get('/index', function () {
+    return view('index');
+});
+Route::get('/EsquemaNino', function () {
+    return view('EsquemaNino');
+});

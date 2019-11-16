@@ -22,7 +22,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbartop" style="padding-bottom:0;padding-top:0;background:#fff;">
 		<div class="container float-left">
-			<a class="navbar-brand logo" href="index.html">
+			<a class="navbar-brand logo" href="/index">
 				<img class="img-logo" src="http://www.durango.gob.mx/wp-content/themes/theme/img/dgo.png" style="width: 175px;">
 				<!-- <img class="img-logo" src="http://www.durango.gob.mx/wp-content/themes/theme/img/dgo_rosa.png" style="width: 175px;"> -->
 			</a>
@@ -65,7 +65,7 @@
         <form style="padding-left: 5%; padding-right: 5%;">
           <div class="form-group">
             <label for="inputPassword4">Correo electronico</label>
-            <input type="email" class="form-control" id="inputPassword4" placeholder="Correo electronico">
+            <input type="email" class="form-control" id="email" placeholder="Correo electronico">
           </div>
           <div class="form-group">
             <label for="inputPassword4">Contraseña</label>
