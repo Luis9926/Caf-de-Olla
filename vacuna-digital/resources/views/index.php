@@ -22,7 +22,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbartop" style="padding-bottom:0;padding-top:0;background:#fff;">
 		<div class="container float-left">
-			<a class="navbar-brand logo" href="index.html">
+			<a class="navbar-brand logo" href="index">
 				<img class="img-logo" src="http://www.durango.gob.mx/wp-content/themes/theme/img/dgo.png" style="width: 175px;">
 				<!-- <img class="img-logo" src="http://www.durango.gob.mx/wp-content/themes/theme/img/dgo_rosa.png" style="width: 175px;"> -->
 			</a>
@@ -63,11 +63,10 @@
       <h1>CONSULTA TU CARTILLA DE SALUD</h1>
       <div class="row">
         <div class="col-6">
-          <h2>{{CURP}}</h2>
+          <h2>e($datos['curp'])</h2>
           <h3>Nombre completo:</h3>
-          {{Nombre completo}}
+          e($datos['nombre']) e($datos['apellido_paterno']) e($datos['apellido_materno'])
           <h3>Genero</h3>
-          {{M / F}}
           <h3>Domicilio:</h3>
           {{Domicilio}}
           <h3>Lugar y fecha de nacimiento</h3>
@@ -79,6 +78,12 @@
           <h3>Afiliación / Matrícula / Expediente:</h3>
           {{}}
           <h3>Unidad Medica:</h3>
+          {{}}-->
+        </div>
+          <div class="col-4">
+            <img src="{{URL::to('/')}}/img/user.png" alt="image" width="350px" height="350px" alt="">
+            <a href="/EsquemaNino"><button onclick="">Ver esquema de valunacion niños</button></a>
+
           {{}}
         </div>
           <div class="col-4">

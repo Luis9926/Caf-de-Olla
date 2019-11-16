@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('EsquemaNino');
+    return view('login');
+});
+Route::get('/index/{id}', 'dataController@ingresar');
+
+Route::get('/EsquemaNino', function () {
 });
