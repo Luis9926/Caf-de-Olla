@@ -17,5 +17,4 @@ Route::get('/', function () {
 Route::get('/index/{id}', 'dataController@ingresar');
 
 Route::get('/EsquemaNino', function () {
-    return view('EsquemaNino');
 });

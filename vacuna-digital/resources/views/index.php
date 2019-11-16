@@ -67,7 +67,6 @@
           <h3>Nombre completo:</h3>
           e($datos['nombre']) e($datos['apellido_paterno']) e($datos['apellido_materno'])
           <h3>Genero</h3>
-          <!--{{M / F}}
           <h3>Domicilio:</h3>
           {{Domicilio}}
           <h3>Lugar y fecha de nacimiento</h3>
@@ -84,6 +83,12 @@
           <div class="col-4">
             <img src="{{URL::to('/')}}/img/user.png" alt="image" width="350px" height="350px" alt="">
             <a href="/EsquemaNino"><button onclick="">Ver esquema de valunacion niños</button></a>
+
+          {{}}
+        </div>
+          <div class="col-4">
+            <img src="img/user.png" width="350px" height="350px" alt="">
+            <a href="EsquemaNino.html"><button onclick="">Ver esquema de valunacion niños</button></a>
           </div>
       </div>
     </div>
